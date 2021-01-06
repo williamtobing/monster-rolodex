@@ -30,3 +30,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+@media (min-width: 2000px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
