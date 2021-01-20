@@ -1,5 +1,7 @@
 import React from "react";
 
+import Fade from "react-reveal/Fade";
+
 import "./App.css";
 
 import { CardList } from "./components/card-list/card-list.component";
@@ -32,11 +34,15 @@ class App extends React.Component {
     );
     return (
       <div className="App">
-        <h1> Monsters Rolodex </h1>
-        <SearchBox
-          placeholder="search monsters"
-          handleChange={this.handleChange}
-        />
+        <Fade bottom cascade>
+          <h1> Monsters Rolodex </h1>
+        </Fade>
+        <Fade bottom>
+          <SearchBox
+            placeholder="search monsters"
+            handleChange={this.handleChange}
+          />
+        </Fade>
         <CardList monsters={filteredMonsters}></CardList>
       </div>
     );
